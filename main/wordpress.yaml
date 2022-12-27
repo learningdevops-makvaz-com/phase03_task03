@@ -1,0 +1,17 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app
+    # add code here
+spec:
+  template:
+    # add code here
+    spec:
+      containers:
+        - name: app
+          image: korney4eg/wordpress-empty:latest
+          ports:
+            # add code here
+          env:
+            # add code here

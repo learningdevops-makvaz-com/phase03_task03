@@ -2,24 +2,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: app
+  name: database
     # add code here
 spec:
   template:
     # add code here
     spec:
       containers:
-        - name: app
-          image: korney4eg/wordpress-empty:latest
-          ports:
-            # add code here
-          env:
-            # add code here
 
         - name: mysql
           image: mysql
+          # this option allow to authenticate to database using user/password
           args:
             - '--default-authentication-plugin=mysql_native_password'
+          # keep this settings
           securityContext:
             capabilities:
               add:
